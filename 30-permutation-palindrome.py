@@ -26,6 +26,27 @@ def is_permutation_a_palindrome(word):
     return singles <= 1
 
 
+def try_again(word):
+    """
+        >>> try_again('civic')
+        True
+        >>> try_again('ivicc')
+        True
+        >>> try_again('civil')
+        False
+        >>> try_again('livci')
+        False
+    """
+    chars = set()
+    for char in word:
+        if char in chars:
+            chars.remove(char)
+        else:
+            chars.add(char)
+
+    return len(chars) <= 1
+
+
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
