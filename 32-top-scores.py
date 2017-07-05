@@ -1,3 +1,5 @@
+# With highest score, can initialize a histogram of scores to keep O(n)
+
 def sort_scores(unsorted_scores, highest_possible_score):
     """
         >>> unsorted_scores = [37, 89, 41, 65, 91, 53]
